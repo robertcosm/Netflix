@@ -1,0 +1,89 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/Netflix-Symbol-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="login.css">
+    <title>Login</title>
+</head>
+<body>
+    <header>
+        <img id="logo" src="img/logotipo-da-netflix-removebg-preview.png">
+    </header>
+    <main>
+        <form action="">
+            <div id="entrar">
+                <h1>Entrar</h1>
+                <input class="login-input" type="text" placeholder="Usuário" id="login">
+                <p class="alerta" hidden >⚠ Este campo não pode estar vazio</p>
+                <input class="login-input" type="password" id="senha" placeholder="Senha">
+                <p class="alerta" hidden >⚠ Este campo não pode estar vazio</p><br>
+                <input type="button" value="Entrar" id="botao" onclick="entrar()">                
+                <div id="help">
+                    <div>
+                        <input type="checkbox" name="Lembrar-se">
+                        <label for="Lembrar-se">Lembre de mim</label>
+                    </div>
+                    <a href="#">Precisa de ajuda?</a>
+                </div>
+            </div>
+        </form>
+    </main>
+
+</body>
+<script>
+    var login = document.getElementById('login');
+    var senha = document.getElementById('senha');
+    var alerta = document.getElementsByClassName('alerta')
+    var usuario_login = 'Joran'
+    var usuario_senha = '1234'
+    var minha_lista = ['Bernardo e Bianca','Carros','Smurfs']
+    function somar(n1,n2){
+        return n1+n2
+    }
+    function quadrado(n1){
+        return n1*n1
+    }
+    function circulo(n1){
+        return n1*n1*3.14
+    }
+
+    login.addEventListener('input', ()=>{
+        if(login.value !=''){
+            alerta[0].setAttribute('hidden','');
+            login.style.marginBottom = '10px';
+        }
+    })
+    senha.addEventListener('input', ()=>{
+        if(senha.value == ''){
+            alerta[1].setAttribute('hidden','');
+            senha.style.marginBottom = '10px';
+        }
+    })
+
+    function entrar(){
+        if (login.value == ''){
+            alerta[0].removeAttribute('hidden');
+            login.style.marginBottom = '0%';
+        }
+        
+        
+        else if(senha.value == ''){
+           alerta[1].removeAttribute('hidden');
+           senha.style.marginBottom = '0%';
+        }
+
+        else if(login.value == usuario_login && senha.value == usuario_senha){
+            window.open('index.html')
+        }
+        else{
+            alerta[0].removeAttribute("hidden");            
+            alerta[0].innerHTML = "Usuário ou senha incorreto";
+        }
+    }
+
+    for(cont = 0; cont<3; cont++){
+       console.log(minha_lista[cont]);
+    }
+</script>
+</html>

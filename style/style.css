@@ -1,0 +1,102 @@
+#logo{
+    width: 200px;
+}
+header{
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    height: 10%;
+}
+nav{
+    width: 100%;
+}
+a{
+    color:white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+body{
+    background-color: #1c1c1c;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    margin: 0%;
+    background-image: url(blue1.jpg);
+    background: linear-gradient(to right, rgb(0,0,0,1),rgb(0,0,0,0.1)),url(blue1.jpg);
+    background-size: cover;
+}
+a:hover{
+    color:darkgray;
+
+}
+main{
+    height: 80%;
+    padding-left: 30px;
+}
+#tit{
+   display: flex;
+   width: 500px;
+
+}
+#sinopse{
+    margin-top: 10px;
+    width:500px;
+    text-align: justify;
+    margin-bottom: 10px
+
+
+}
+button{
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    cursor:pointer;
+    
+}
+#bt2{
+    background-color: grey;
+    color: white;
+    border: none;
+}
+ 
+button:hover{
+    background-color: grey;
+    color: white;
+    border:none
+}
+#bt2:hover{
+    background-color: red;
+    color:white
+}
+#bt3{
+    width:40px;
+    border: none;
+}
+#bt4{
+    width: 40px;
+    border: none;
+}
+#filmes{
+    display: flex;
+}
+#recomendacao{
+    margin-top: 50px;
+}
+#recomendcao h1{
+    margin: 0%;
+}
+#filmes img{
+width: 265px;
+margin: 10px;
+transition-duration: 0.2s;
+transform: scale(1.1);
+}
+#filmes img:hover{
+    width: 280px;
+}
+#rc1 img{
+    width: 280px;
+}
+#rc1 img:hover{
+    width: 295px;
+}
